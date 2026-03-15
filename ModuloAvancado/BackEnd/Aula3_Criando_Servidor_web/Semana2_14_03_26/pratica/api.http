@@ -1,0 +1,24 @@
+
+GET http://localhost:8080/
+
+###
+
+GET http://localhost:8080/aluno
+
+###
+
+HEAD http://localhost:8080/
+
+###
+
+GET http://localhost:8080/Professor
+
+####
+POST http://localhost:8080
+
+###
+PUT http://localhost:8080/
+
+###
+
+DELETE http://localhost:8080/
