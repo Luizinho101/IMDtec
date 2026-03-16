@@ -1,0 +1,32 @@
+GET http://localhost:8080/aluno
+
+###
+
+POST http://localhost:8080/aluno
+Content-Type: application/json
+
+{
+    "nome": "Carlos"
+}
+
+###
+
+PUT http://localhost:8080/aluno
+Content-Type: application/json
+
+{
+    "nome": "Carlos Atualizado"
+}
+
+###
+
+PATCH http://localhost:8080/aluno
+Content-Type: application/json
+
+{
+    "nome": "Carlos Parcial"
+}
+
+###
+
+DELETE http://localhost:8080/aluno
