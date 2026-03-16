@@ -1,0 +1,31 @@
+GET http://localhost:8080/
+
+###
+
+GET http://localhost:8080/alunos
+
+### 
+
+GET http://localhost:8080/alunos/7d3c6569-74d8-4b30-8351-eece1a5290cf
+
+###
+
+POST http://localhost:8080/alunos
+Content-type: application/json
+
+{
+    "nome": "Maria Aline"
+}
+
+###
+
+PUT http://localhost:8080/alunos?id=7d3c6569-74d8-4b30-8351-eece1a5290cf
+Content-type: application/json
+
+{
+    "nome": "Pedro Avelino"
+}
+
+###
+DELETE  http://localhost:8080/alunos?id=7d3c6569-74d8-4b30-8351-eece1a5290cf
+Content-type: application/json
