@@ -1,0 +1,41 @@
+
+GET http://localhost:8080/
+
+###
+
+GET http://localhost:8080/produtos
+
+
+###
+
+POST http://localhost:8080/produtos
+Content-Type: application/json
+
+{
+    "nome": "Celular Sansung",
+    "descricao": "celuar com peso de 200g da marca sansng"
+}
+
+###
+
+POST http://localhost:8080/produtos
+Content-Type: application/json
+
+{
+    "nome": "Celular Nokia"
+}
+
+###
+
+PUT http://localhost:8080/produtos?id=1
+Content-Type: application/json
+
+{
+    "nome": "Celular Nokia"
+}
+
+###
+
+DELETE  http://localhost:8080/produtos?id=1
+Content-Type: application/json
+
