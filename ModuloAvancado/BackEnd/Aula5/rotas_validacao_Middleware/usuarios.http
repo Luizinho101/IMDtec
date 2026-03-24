@@ -1,0 +1,66 @@
+
+GET http://localhost:8080/usuarios
+
+###
+//..................................................
+
+GET http://localhost:8080/usuarios/860f1fd4-7d37-4209-a924-ac743b1cbab1
+###
+
+//..................................................
+// POST -> Com dados válidos
+
+POST http://localhost:8080/usuarios
+Content-type: application/json
+
+{
+    "email": "pedro@gmail.com",
+    "senha": "@xvls12#"
+}
+
+###
+//..................................................
+// POSTs -> com dados inválidos
+POST http://localhost:8080/usuarios
+Content-type: application/json
+
+{
+    "email": "xallelaç",
+    "senha": "@xvls12#"
+}
+
+//..................................................
+
+
+
+
+// PUT -> Com dados válidos
+
+
+###
+
+
+PUT http://localhost:8080/usuarios?id=860f1fd4-7d37-4209-a924-ac743b1cbab1
+Content-type: application/json
+
+{
+    "email": "Joelma@gmail.com",
+    "senha": "@xvls12#"
+}
+
+
+//PUT -> Com dados inválidoss
+###
+PUT http://localhost:8080/usuarios?id=860f1fd4-7d37-4209-a924-ac743b1cbab1
+Content-type: application/json
+
+{
+    "nome": "joão"
+}
+
+
+//..................................................
+
+###
+DELETE http://localhost:8080/usuarios?id=860f1fd4-7d37-4209-a924-ac743b1cbab1
+Content-type: application/json

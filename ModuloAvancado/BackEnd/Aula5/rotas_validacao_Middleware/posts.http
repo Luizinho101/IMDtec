@@ -1,0 +1,31 @@
+
+GET http://localhost:8080/posts
+
+###
+
+GET http://localhost:8080/posts/3fc617db-e1ce-4507-8476-d7c6a104a624
+
+###
+
+
+POST http://localhost:8080/posts
+Content-type: application/json
+
+{
+    "titulo": "texto de teste",
+    "texto": "esse é o texto de teste"
+}
+
+###
+PUT http://localhost:8080/posts?id=773a97a6-3b59-44f0-9432-6f5ed96230ea
+Content-type: application/json
+
+{
+    "titulo": "Atualizando poste",
+    "texto": "Estou atualizando o corpo do texto"
+}
+
+
+###
+DELETE http://localhost:8080/posts?id=3fc617db-e1ce-4507-8476-d7c6a104a624
+Content-type: application/json
