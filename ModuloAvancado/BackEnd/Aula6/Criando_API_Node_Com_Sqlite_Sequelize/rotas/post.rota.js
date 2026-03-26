@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const postMid = require('../middleware/validarPost.middleware')
+const postMid = require('../Middleware/validarPost.middleware')
 const { Post } = require('../models')
 
 router.post('/', postMid)

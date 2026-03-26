@@ -1,7 +1,8 @@
 const Ajv = require('ajv')
 const ajv = new Ajv()
-const addFormats = require("ajv-formats")
 const usuarioSchema = require('../schema/usuario.schema')
+
+const addFormats = require("ajv-formats")
 addFormats(ajv)
 
 function validarUsuario(req, res, next){

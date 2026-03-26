@@ -4,7 +4,7 @@ GET http://localhost:8080/usuarios
 ###
 //..................................................
 
-GET http://localhost:8080/usuarios/860f1fd4-7d37-4209-a924-ac743b1cbab1
+GET http://localhost:8080/usuarios/2
 ###
 
 //..................................................
@@ -14,8 +14,8 @@ POST http://localhost:8080/usuarios
 Content-type: application/json
 
 {
-    "email": "pedro@gmail.com",
-    "senha": "@xvls12#"
+    "email": "antonio@gmail.com",
+    "senha": "antonio1234"
 }
 
 ###
@@ -40,7 +40,7 @@ Content-type: application/json
 ###
 
 
-PUT http://localhost:8080/usuarios?id=860f1fd4-7d37-4209-a924-ac743b1cbab1
+PUT http://localhost:8080/usuarios?id=1
 Content-type: application/json
 
 {
@@ -62,5 +62,5 @@ Content-type: application/json
 //..................................................
 
 ###
-DELETE http://localhost:8080/usuarios?id=860f1fd4-7d37-4209-a924-ac743b1cbab1
+DELETE http://localhost:8080/usuarios?id=3
 Content-type: application/json

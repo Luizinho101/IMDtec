@@ -12,8 +12,8 @@ POST http://localhost:8080/posts
 Content-type: application/json
 
 {
-    "titulo": "Segundo titulo de teste",
-    "texto": "esse é o segundo texto que utilizo como teste"
+    "titulo": "Teste para verificar se insere 2",
+    "texto": "esse é um teste para verificar se insere algo2"
 }
 
 ###
