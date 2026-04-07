@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Detalhes do Compromisso</title> 
+    <style> 
+        h1 { 
+            text-align: center; 
+            font-family: sans-serif;
+        } 
+        /* Estilos para o formulário */ 
+        form { 
+            max-width: 500px; 
+            margin: auto; 
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        } 
+        /* Container para cada linha do formulário */ 
+        .form-group { 
+            display: flex; 
+            margin-bottom: 15px; 
+            align-items: center;
+        } 
+        /* Alinha os rótulos à direita */ 
+        label { 
+            width: 100px; 
+            text-align: right; 
+            margin-right: 15px; 
+            font-weight: bold;
+            font-family: sans-serif;
+        } 
+        /* Define largura para os campos de entrada */ 
+        input[type="text"], 
+        input[type="number"],
+        textarea { 
+            flex: 1; 
+            padding: 8px; 
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        } 
+        /* Formatação do textarea */ 
+        textarea { 
+            resize: vertical; 
+            height: 80px; 
+        } 
+        .voltar {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-family: sans-serif;
+        }
+    </style> 
+</head> 
+<body> 
+    <h1>Detalhes da Agenda</h1> 
+    
+    <form> 
+        <div class="form-group"> 
+            <label for="id">Id:</label> 
+            <input type="number" id="id" name="id" value="<%= agenda.id %>" readonly> 
+        </div> 
+
+        <div class="form-group"> 
+            <label for="data">Data:</label> 
+            <input type="text" id="data" name="data" value="<%= agenda.data %>"> 
+        </div> 
+
+        <div class="form-group"> 
+            <label for="evento">Evento:</label> 
+            <input type="text" id="evento" name="evento" value="<%= agenda.evento %>"> 
+        </div> 
+
+        <div class="form-group"> 
+            <label for="local">Local:</label> 
+            <input type="text" id="local" name="local" value="<%= agenda.local %>"> 
+        </div> 
+
+        <div class="form-group"> 
+            <label for="resumo">Resumo:</label> 
+            <textarea id="resumo" name="resumo"><%= agenda.resumo %></textarea> 
+        </div> 
+    </form> 
+
+    <a href="/agendas" class="voltar">← Voltar para a lista</a>
+</body> 
+</html>

@@ -1,0 +1,53 @@
+### 1. Inserir um novo evento na Agenda (POST)
+POST http://localhost:8080/api/agenda
+Content-Type: application/json
+
+{
+    "data": "2026-05-20 09:00:00",
+    "evento": "Apresentação de Projeto",
+    "local": "Auditório Central",
+    "resumo": "Apresentação final do módulo de Node.js e Sequelize"
+}
+
+###
+
+### 2. Buscar todos os eventos em formato JSON (GET API)
+GET http://localhost:8080/api/agendas
+
+###
+
+### 3. Buscar um evento específico pelo ID em formato JSON (GET API)
+# Substitua o '1' pelo ID que foi gerado no passo 1
+GET http://localhost:8080/api/agenda/1
+
+###
+
+### 4. Visualizar a página formatada de todos os eventos (GET Navegador)
+# Ao clicar aqui, o VS Code abrirá o HTML renderizado pelo EJS
+GET http://localhost:8080/agendas
+
+###
+
+### 5. Visualizar a página de detalhes de um evento (GET Navegador)
+GET http://localhost:8080/agenda/1
+
+###
+
+### 6. Atualizar os dados de um evento (PUT)
+PUT http://localhost:8080/api/agenda/1
+Content-Type: application/json
+
+{
+    "evento": "Apresentação de Projeto (ADIDADO)",
+    "local": "Sala Virtual Zoom"
+}
+
+###
+
+### 7. Excluir um evento da Agenda (DELETE)
+DELETE http://localhost:8080/api/agenda/1
+
+###
+
+### 8. Verificar se o evento foi excluído (GET)
+GET http://localhost:8080/api/agenda/1

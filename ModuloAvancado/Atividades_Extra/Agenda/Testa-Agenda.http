@@ -1,0 +1,25 @@
+### Testar a Criação (POST)
+POST http://localhost:8080/agenda
+Content-Type: application/json
+
+{
+    "data": "2026-04-10 14:00:00",
+    "evento": "Aula de Express",
+    "local": "Laboratório 02",
+    "resumo": "Entendendo rotas e métodos HTTP"
+}
+
+### Testar a Consulta (GET)
+GET http://localhost:8080/agenda?id=123
+
+### Testar a Atualização (PUT)
+PUT http://localhost:8080/agenda/456
+Content-Type: application/json
+
+{
+    "evento": "Aula de Express Alterada",
+    "local": "Sala de Reuniões"
+}
+
+### Testar a Exclusão (DELETE)
+DELETE http://localhost:8080/agenda/789
