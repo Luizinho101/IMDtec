@@ -1,0 +1,31 @@
+GET http://localhost:8080/cursos
+
+###
+
+POST http://localhost:8080/cursos
+Content-Type: application/json
+
+{
+    "nome": "Programação Orientada a Objetos",
+    "ch": 260
+}
+
+###
+
+POST http://localhost:8080/cursos
+Content-Type: application/json
+
+{
+    "nome": "Estruturas de dados",
+    "ch": 340
+}
+
+###
+
+POST http://localhost:8080/cursos
+Content-Type: application/json
+
+{
+    "nome": "Algoritmo e programação",
+    "ch": 340
+}

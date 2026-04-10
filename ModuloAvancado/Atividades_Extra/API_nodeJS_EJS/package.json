@@ -1,0 +1,17 @@
+{
+  "name": "api_nodejs_ejs",
+  "version": "1.0.0",
+  "description": "Criar API em memoria para testar o ejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
