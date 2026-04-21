@@ -1,0 +1,60 @@
+
+GET http://localhost:8080/produtos
+
+###
+
+
+
+### POST 
+
+
+###
+POST http://localhost:8080/produtos
+Content-Type: application/json
+
+{
+    "nome": "Celular"
+}
+
+###
+POST http://localhost:8080/produtos
+Content-Type: application/json
+
+{
+    "nome": "Noteboook"
+}
+
+###
+POST http://localhost:8080/produtos
+Content-Type: application/json
+
+{
+    "nome": "Teclado "
+}
+
+
+### PUT
+
+
+###
+PUT http://localhost:8080/produtos/1
+Content-Type: application/json
+
+{
+    "nome": "Alterando o produto 1"
+}
+
+
+###
+PUT http://localhost:8080/produtos/2
+Content-Type: application/json
+
+{
+    "nome": "Alterando o produto 2"
+}
+
+
+###
+DELETE http://localhost:8080/produtos/1
+
+
