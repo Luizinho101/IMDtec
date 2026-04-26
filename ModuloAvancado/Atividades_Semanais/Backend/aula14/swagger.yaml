@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  title: API de Usuários - IMD
+  description: API para gerenciamento de usuários com validação de dados.
+  version: 1.0.0
+
+paths:
+  /users:
+    get:
+      summary: Lista todos os usuários
+      responses:
+        200:
+          description: Uma lista de usuários.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  users:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/User'
+    post:
+      summary: Adiciona um novo usuário
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        200:
+          description: Usuário adicionado com sucesso.
+        400:
+          description: Dados inválidos (Erro na validação AJV).
+
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - name
+        - email
+        - password
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        password:
+          type: string
