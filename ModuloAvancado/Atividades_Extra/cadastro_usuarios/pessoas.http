@@ -1,0 +1,34 @@
+
+GET http://localhost:8080/pessoas
+
+
+###
+POST http://localhost:8080/pessoas
+Content-Type: application/json
+
+{
+    "nome": "Luiz",
+    "sobrenome": "Antônio"
+}
+
+###
+POST http://localhost:8080/pessoas
+Content-Type: application/json
+
+{
+    "nome": "Pedro",
+    "sobrenome": "Calvacante"
+}
+
+###
+PUT http://localhost:8080/pessoas/1
+Content-Type: application/json
+
+{
+    "nome": "Jone",
+    "sobrenome": "Jones"
+}
+
+###
+DELETE http://localhost:8080/pessoas/1
+Content-Type: application/json

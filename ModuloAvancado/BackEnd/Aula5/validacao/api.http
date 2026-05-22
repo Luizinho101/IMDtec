@@ -1,0 +1,43 @@
+
+GET http://localhost:8080/
+
+###
+
+GET http://localhost:8080/alunos
+
+### 
+//POST -> Com dados corretos
+
+POST http://localhost:8080/alunos
+Content-type: application/json
+
+{
+    "nome": "João",
+    "RA": "123290281",
+    "email": "usuario@gmail.com"
+}
+
+### 
+//POST -> Com quantidade de dados incorretos
+
+POST http://localhost:8080/alunos
+Content-type: application/json
+
+{
+    "nome": "Luiz",
+    "RA": "123",
+    "email": "usuario@gmail.com",
+    "idade": 22
+}
+
+### 
+//POST -> Com quantipagem errada
+
+POST http://localhost:8080/alunos
+Content-type: application/json
+
+{
+    "nome": "Luiz",
+    "RA": 123,
+    "email": "usuario11111"
+}

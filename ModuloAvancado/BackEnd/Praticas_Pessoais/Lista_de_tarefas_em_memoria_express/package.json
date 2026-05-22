@@ -1,0 +1,17 @@
+{
+  "name": "lista_de_tarefas_em_memoria_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "Dev": "nodemon --exec node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
