@@ -1,0 +1,26 @@
+# Dependências do Node (nunca devem ir para o GitHub)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Uploads locais de imagens dos produtos (evita subir fotos de teste)
+admin/public/images/*
+# Abre uma exceção para não apagar a pasta inteira, caso queira manter um arquivo oculto nela
+!admin/public/images/.gitkeep
+
+# Arquivos de configuração local e chaves sensíveis
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Bancos de dados locais (caso mude para SQLite em algum teste ou guarde dumps)
+*.db
+*.sqlite
+*.sql
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
