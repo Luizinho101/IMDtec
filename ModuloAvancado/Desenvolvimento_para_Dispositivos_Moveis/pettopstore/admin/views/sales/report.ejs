@@ -1,0 +1,24 @@
+<h1>Relatório de vendas</h1>
+<a href="/">Voltar</a>
+<br/><br/>
+
+<% for (const sale of sales) { %>
+  <div style="border: 1px solid gray; padding: 10px; margin-bottom: 10px; border-radius: 4px;">
+    <strong>Código da Venda:</strong> #<%= sale.id %><br/>
+    
+    <% if (sale.employee_id) { %>
+      <strong>Funcionário:</strong> <%= sale.employee?.name %><br/>
+    <% } %>
+    
+    <% if (sale.client_id) { %>
+      <strong>Cliente:</strong> <%= sale.client?.name %><br/>
+    <% } %>
+    
+    <strong>Itens:</strong>
+    <ul>
+      <% for (const item of sale.items) { %>
+        <li><%= item.product?.name %> - R$ <%= parseFloat(item.product?.price).toFixed(2) %></li>
+      <% } %>
+    </ul>
+  </div>
+<% } %>

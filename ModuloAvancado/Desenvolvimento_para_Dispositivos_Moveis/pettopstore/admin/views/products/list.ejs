@@ -8,6 +8,7 @@
       <th>Foto</th>
       <th>Nome</th>
       <th>Preço</th>
+      <th>Categoria</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
         <td><img src="/images/<%= product.photo %>" width="100px" /></td>
         <td><%= product.name %></td>
         <td>R$ <%= parseFloat(product.price).toFixed(2) %></td>
+        <td><%= product.category?.name %></td>
       </tr>
     <% } %>
   </tbody>

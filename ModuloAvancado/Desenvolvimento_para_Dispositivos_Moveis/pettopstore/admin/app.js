@@ -3,24 +3,24 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 var cookieSession = require('cookie-session');
 
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
+var apiRouter = require('./routes/api');
 const requireAuth = require('./middlewares/requireAuth');
-var productsRouter = require('./routes/products');
 
-// Criação do app Express (deve vir antes de usar os middlewares)
 var app = express();
 
-// Configurando o gerenciador de sessões por cookies
+app.use(cors());
+
 app.use(cookieSession({
   name: 'pettopstore_session', 
   keys: ['chave_secreta_para_criptografia'], 
   maxAge: 24 * 60 * 60 * 1000, 
 }));
 
-// Configuração da View Engine (EJS)
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -30,17 +30,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.use('/api', apiRouter);
 app.use('/auth', authRouter);
 app.use('/', [requireAuth], indexRouter);
-app.use('/products', [requireAuth], productsRouter); // <-- Adicione essa linha aqui
 
-// Tratamento de erro 404 (Página Não Encontrada)
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// Tratamento geral de erros internos do servidor
 app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
